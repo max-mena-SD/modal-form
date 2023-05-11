@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document test for modal</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="contentModal">
+      <div class="titleModal">
+        <h2>SUBMIT DOCUMENT</h2>
+        <h4>for review</h4>
+      </div>
+      <section class="leftModal">
+        <p>What document are you submitting?</p>
+        <article>
+          <input type="radio" id="new-doc" name="doc-type" value="new" />
+          <label for="new-doc">New document</label><br />
+          <input
+            type="radio"
+            id="existing-doc"
+            name="doc-type"
+            value="existing"
+          />
+          <label for="existing-doc">Existing document</label><br />
+        </article>
+        <article>
+          <h3>IMPORTANT!</h3>
+          <label>
+            <input type="checkbox" name="latest-template" />
+            Did you use the latest template?
+          </label>
+          <h4>Download template</h4>
+          <hr />
+          <p>
+            Watch the short tutorial below on how you can use the template when
+            creating new documents:
+          </p>
+          <div style="max-width: 560px">
+            <div
+              style="
+                position: relative;
+                padding-bottom: 56.25%;
+                height: 0;
+                overflow: hidden;
+              "
+            >
+              <iframe
+                src="https://hpe.sharepoint.com/teams/BPQResourceCenter/_layouts/15/embed.aspx?UniqueId=d45cff9c-682f-40cf-a362-d1f0d7a59be2&embed=%7B%22hvm%22%3Atrue%2C%22ust%22%3Atrue%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create"
+                width="560"
+                height="315"
+                frameborder="0"
+                scrolling="no"
+                allowfullscreen
+                title="HOW TO Create new documents GUIDE.mp4"
+                style="
+                  border: none;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                  height: 100%;
+                  max-width: 100%;
+                "
+              ></iframe>
+            </div>
+          </div>
+        </article>
+        <article>
+          <p>Is you document urgent? ("turn around time is 48h")</p>
+
+          <input type="radio" id="urgent-yes" name="doc-type" value="Yes" />
+          <label for="urgent-yes">Yes</label><br />
+
+          <input type="radio" id="urgent-no" name="doc-type" value="No" />
+          <label for="urgent-no">No</label><br />
+        </article>
+        <article>
+          <label for="domain">Domain</label>
+          <input id="domain" type="text" />
+        </article>
+
+        <article>
+          <label for="sub-domain">Sub-Domain</label>
+          <input id="sub-domain" type="text" />
+        </article>
+
+        <article>
+          <label for="domainCategory">Domain Category</label>
+          <input id="domainCategory" type="text" />
+        </article>
+      </section>
+
+      <section class="rightModal">
+        <article>
+          <p>Important check-list. Before you submit, make sure:</p>
+          <div class="checkboxList">
+            <input type="checkbox" name="check-list-1" id="check-list-1" />
+            <label for="check-list-1"
+              >The document owner and Process owner are different people.</label
+            >
+            <input type="checkbox" name="check-list-2" id="check-list-2" />
+            <label for="check-list-2"
+              >All steps are following the correct style.</label
+            >
+            <input type="checkbox" name="check-list-3" id="check-list-3" />
+            <label for="check-list-3"
+              >All tables are in the right format.</label
+            >
+            <input type="checkbox" name="check-list-4" id="check-list-4" />
+            <label for="check-list-4">All links are working.</label>
+            <input type="checkbox" name="check-list-5" id="check-list-5" />
+            <label for="check-list-5"
+              >Glossary of acronyms is filled in and all acronyms are referred
+              with their full name the first time they were mentioned.</label
+            >
+            <input type="checkbox" name="check-list-6" id="check-list-6" />
+            <label for="check-list-6"
+              >Change description table is filled in with latest update on
+              top.</label
+            >
+          </div>
+        </article>
+        <article>
+          <p>
+            After your document is reviewed and published, do yo wanted it added
+            to a special webpage?
+          </p>
+          <input type="radio" id="webpage-yes" name="doc-type" value="Yes" />
+          <label for="webpage-yes">Yes</label><br />
+
+          <input type="radio" id="webpage-no" name="doc-type" value="No" />
+          <label for="webpage-no">No</label><br />
+        </article>
+        <article>
+          <p>Link to your webpage</p>
+          <input
+            type="url"
+            name="webpageUrl"
+            id="webpageUrl"
+            placeholder="Ex. https://mylink.com"
+          />
+        </article>
+        <article>
+          <label for="file-upload">Seleccionar archivo:</label>
+          <input type="file" id="file-upload" name="file-upload" />
+        </article>
+        <article>
+          <p for="additionalComments">Any additional comments</p>
+          <textarea
+            name="additionalComments"
+            id="additionalComments"
+            rows="3"
+            resize="none"
+          ></textarea>
+        </article>
+      </section>
+
+      <div class="bottomModal"></div>
+      <p>
+        * The turnaround time for urgent documents is 48h in case the document
+        is up 10 pages and meeting the 80% of the standard.
+      </p>
+      <button type="submit">Submit</button>
+      <button data-close-modal>Go back</button>
+    </div>
+  </body>
+</html>
