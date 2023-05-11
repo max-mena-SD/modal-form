@@ -1,3 +1,7 @@
+dialog {
+  border: none;
+}
+
 .contentModal {
   display: grid;
   width: 800px;
@@ -19,9 +23,18 @@ h4 {
   text-align: center;
 }
 
+hr{
+    border-color: lightgray;
+}
+
 fieldset {
   border-radius: 4px;
-  margin: 2% 0;
+  margin: 5% 0;
+  padding: 3%;
+}
+
+legend{
+    font-size: 2vmin;
 }
 
 .titleModal,
@@ -50,12 +63,12 @@ textarea {
   height: 100%;
   resize: none;
   box-sizing: border-box;
-  /* margin: -10px; */
   padding: 20px;
 }
 
 .bottomModal p {
   display: block;
+  padding-bottom: 5px;
 }
 
 p {
@@ -73,3 +86,5 @@ p {
 .checkboxList div label {
   font-size: 2vmin;
 }
+
+

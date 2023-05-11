@@ -19,13 +19,6 @@
       <button data-open-modal>Open</button>
 
       <dialog data-modal class="modal">
-        <!-- <div>This is a modal</div>
-        <form action="">
-          <input type="text" />
-          <button type="submit">Submit</button>
-        </form> -->
-        <!-- <button data-close-modal>Close</button> -->
-
         <div class="contentModal">
           <div class="titleModal">
             <h2>SUBMIT DOCUMENT</h2>
@@ -34,8 +27,15 @@
           <section class="leftModal">
             <fieldset>
               <legend>What document are you submitting?</legend>
-              <input type="radio" id="new-doc" name="doc-type" value="new" />
+              <input
+                type="radio"
+                id="new-doc"
+                name="doc-type"
+                value="new"
+                required
+              />
               <label for="new-doc">New document</label><br />
+
               <input
                 type="radio"
                 id="existing-doc"
@@ -44,7 +44,7 @@
               />
               <label for="existing-doc">Existing document</label><br />
             </fieldset>
-            <fieldset>
+            <fieldset id="modal-important">
               <h3>IMPORTANT!</h3>
               <label>
                 <input type="checkbox" name="latest-template" />
@@ -88,7 +88,7 @@
                 </div>
               </div>
             </fieldset>
-            <fieldset>
+            <fieldset id="modal-urgent">
               <p>Is you document urgent? ("turn around time is 48h")</p>
 
               <input type="radio" id="urgent-yes" name="doc-type" value="Yes" />
@@ -97,7 +97,7 @@
               <input type="radio" id="urgent-no" name="doc-type" value="No" />
               <label for="urgent-no">No</label><br />
             </fieldset>
-            <fieldset class="domainModal">
+            <fieldset class="domainModal" id="modal-domain">
               <label for="domain">Domain</label>
               <input id="domain" type="text" />
 
@@ -110,7 +110,7 @@
           </section>
 
           <section class="rightModal">
-            <fieldset>
+            <fieldset id="modal-checklist">
               <legend>
                 Important check-list. Before you submit, make sure:
               </legend>
@@ -179,11 +179,11 @@
                 </div>
               </div>
             </fieldset>
-            <fieldset>
-              <legend>
+            <fieldset id="modal-webpage">
+              <p>
                 After your document is reviewed and published, do yo wanted it
                 added to a special webpage?
-              </legend>
+              </p>
               <input
                 type="radio"
                 id="webpage-yes"
@@ -195,7 +195,7 @@
               <input type="radio" id="webpage-no" name="doc-type" value="No" />
               <label for="webpage-no">No</label><br />
             </fieldset>
-            <fieldset>
+            <fieldset id="modal-link">
               <legend>Link to your webpage</legend>
               <input
                 type="url"
@@ -204,11 +204,11 @@
                 placeholder="Ex. https://mylink.com"
               />
             </fieldset>
-            <fieldset>
+            <fieldset id="modal-file">
               <legend for="file-upload">Seleccionar archivo:</legend>
               <input type="file" id="file-upload" name="file-upload" />
             </fieldset>
-            <fieldset>
+            <fieldset id="modal-comments">
               <legend for="additionalComments">Any additional comments</legend>
               <textarea
                 name="additionalComments"
@@ -231,7 +231,7 @@
       </dialog>
     </main>
 
-    <script>
+    <!-- <script>
       const openButton = document.querySelector("[data-open-modal]");
       const closeButton = document.querySelector("[data-close-modal]");
       const modal = document.querySelector("[data-modal]");
@@ -242,6 +242,7 @@
       closeButton.addEventListener("click", () => {
         modal.close();
       });
-    </script>
+    </script> -->
+    <script src="./submitDocuments.js"></script>
   </body>
 </html>
