@@ -25,7 +25,7 @@
             <h4>for review</h4>
           </div>
           <section class="leftModal">
-            <fieldset>
+            <fieldset id="modal-document">
               <legend>What document are you submitting?</legend>
               <input
                 type="radio"
@@ -91,12 +91,94 @@
             <fieldset id="modal-urgent">
               <p>Is you document urgent? ("turn around time is 48h")</p>
 
-              <input type="radio" id="urgent-yes" name="doc-type" value="Yes" />
+              <input
+                type="radio"
+                id="urgent-yes"
+                name="urgent-doc"
+                value="Yes"
+                required
+              />
               <label for="urgent-yes">Yes</label><br />
 
-              <input type="radio" id="urgent-no" name="doc-type" value="No" />
+              <input type="radio" id="urgent-no" name="urgent-doc" value="No" />
               <label for="urgent-no">No</label><br />
             </fieldset>
+            <div id="modal-SOP">
+              <label for="SOP">Enter the SOP of your document below:</label>
+              <input type="text" id="SOP" placeholder="SOP xxxxxx" />
+            </div>
+            <fieldset id="modal-changes">
+              <legend>Mark all changes you made to your document:</legend>
+              <div class="changeList">
+                <div>
+                  <input
+                    type="checkbox"
+                    name="change-list-8"
+                    id="change-list-8"
+                  />
+                  <label for="change-list-8">Process owner</label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    name="change-list-9"
+                    id="change-list-9"
+                  />
+                  <label for="change-list-9">Document Owner</label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    name="change-list-10"
+                    id="change-list-10"
+                  />
+                  <label for="change-list-10">Backup document owner</label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    name="change-list-11"
+                    id="change-list-11"
+                  />
+                  <label for="change-list-11">Process title</label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    name="change-list-12"
+                    id="change-list-12"
+                  />
+                  <label for="change-list-12">Document title</label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    name="change-list-13"
+                    id="change-list-13"
+                  />
+                  <label for="change-list-13">Visio diagram</label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    name="change-list-14"
+                    id="change-list-14"
+                  />
+                  <label for="change-list-14">Content changes</label>
+                </div>
+              </div>
+            </fieldset>
+            <div id="modal-enter">
+              <label for="change-description"
+                >Place enter a change description to your content below:</label
+              >
+              <input
+                type="text"
+                id="change-description"
+                class="change-description"
+                placeholder="Enter a short description of the content changes you made here."
+              />
+            </div>
             <fieldset class="domainModal" id="modal-domain">
               <label for="domain">Domain</label>
               <input id="domain" type="text" />
@@ -204,19 +286,44 @@
                 placeholder="Ex. https://mylink.com"
               />
             </fieldset>
+            <fieldset id="modal-important-exist">
+              <h4>IMPORTANT!</h4>
+              <div>
+                <input
+                  type="checkbox"
+                  name="change-list-15"
+                  id="change-list-15"
+                />
+                <label for="change-list-15"
+                  >Please double check that the title of the updated document is
+                  the same as the original document you downloaded from the
+                  Resource Center.
+                </label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="change-list-16"
+                  id="change-list-16"
+                />
+                <label for="change-list-16"
+                  >You marked all changes in yellow.</label
+                >
+              </div>
+            </fieldset>
             <fieldset id="modal-file">
               <legend for="file-upload">Seleccionar archivo:</legend>
               <input type="file" id="file-upload" name="file-upload" />
             </fieldset>
-            <fieldset id="modal-comments">
-              <legend for="additionalComments">Any additional comments</legend>
+            <div id="modal-comments">
+              <label for="additionalComments">Any additional comments</label>
               <textarea
                 name="additionalComments"
                 id="additionalComments"
                 rows="3"
                 resize="none"
               ></textarea>
-            </fieldset>
+            </div>
           </section>
 
           <div class="bottomModal">
@@ -230,19 +337,6 @@
         </div>
       </dialog>
     </main>
-
-    <!-- <script>
-      const openButton = document.querySelector("[data-open-modal]");
-      const closeButton = document.querySelector("[data-close-modal]");
-      const modal = document.querySelector("[data-modal]");
-
-      openButton.addEventListener("click", () => {
-        modal.showModal();
-      });
-      closeButton.addEventListener("click", () => {
-        modal.close();
-      });
-    </script> -->
     <script src="./submitDocuments.js"></script>
   </body>
 </html>
